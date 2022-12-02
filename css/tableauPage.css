@@ -1,0 +1,38 @@
+img {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Nerko One', cursive;
+    color: white;
+    background-color: black;
+}
+
+a {
+    color: skyblue;
+}
+a:visited {
+    color: whitesmoke
+}
+a:active {
+    color: white;
+}
+
+.parentInfoDiv {
+    display: flex;
+}
+
+.neighborhoodsDiv {
+    flex: 3;
+    float:left;
+}
+
+.youtubeVidDiv {
+    flex: 9;
+    margin-right: 5em;
+}
+
+.tableauPlaceholder {
+    width: 100%;
+}
