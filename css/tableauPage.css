@@ -24,13 +24,13 @@ a:active {
 }
 
 .neighborhoodsDiv {
-    flex: 3;
     float:left;
 }
 
-.youtubeVidDiv {
-    flex: 9;
-    margin-right: 5em;
+.actualiframe { 
+    border: none; 
+    margin: 0; 
+    padding: 0; 
 }
 
 .tableauPlaceholder {
