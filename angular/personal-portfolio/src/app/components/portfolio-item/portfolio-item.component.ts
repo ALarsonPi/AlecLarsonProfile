@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './portfolio-item.component.html',
 })
 export class PortfolioItemComponent {
-  @Input() imageUrl = "assets/img/portfolio/foodheroImage.png";
+  @Input() imageUrl = "";
   @Input() imageAltText = "...";
+  @Input() modalTarget = "";
 }

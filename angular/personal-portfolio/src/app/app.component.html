@@ -10,14 +10,13 @@
         <link rel="icon" type="image/x-icon" href="assets/img/emoji.ico" />
         <!-- <a href="https://www.flaticon.com/free-icons/emoji" title="emoji icons">Emoji icons created by Fathema Khanom - Flaticon</a>-->
         <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
-
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <!-- <link href="css/styles.css" rel="stylesheet" /> -->
+        <!-- Bootstrap (version matters for the modal popup functionality) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -67,62 +66,12 @@
                 </div>
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center">
-                    <!-- Portfolio Item 1 (FoodHero)-->
-                    <app-portfolio-item></app-portfolio-item>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/foodheroImage.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 6 (Konekt)-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/konekt.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 4 (Chore Sync)-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/resizedTransparent.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 2 (Goals App)-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/targetTransparent.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 5 (Red Box)-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/redSquareIcon.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 3 (Easy Returns)-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/easyReturnsLogo.png" alt="..." />
-                        </div>
-                    </div>
-
+                    <app-portfolio-item imageAltText="Foodhero Logo" imageUrl="assets/img/portfolio/foodheroImage.png" modalTarget="#portfolioModal1" ></app-portfolio-item>
+                    <app-portfolio-item imageAltText="Konekt Logo" imageUrl="assets/img/portfolio/konekt.png" modalTarget="#portfolioModal6" ></app-portfolio-item>
+                    <app-portfolio-item imageAltText="Chore Sync Logo" imageUrl="assets/img/portfolio/resizedTransparent.png" modalTarget="#portfolioModal4" ></app-portfolio-item>
+                    <app-portfolio-item imageAltText="Goals App Logo" imageUrl="assets/img/portfolio/targetTransparent.png" modalTarget="#portfolioModal2" ></app-portfolio-item>
+                    <app-portfolio-item imageAltText="Red Box Logo" imageUrl="assets/img/portfolio/redSquareIcon.png" modalTarget="#portfolioModal5" ></app-portfolio-item>
+                    <app-portfolio-item imageAltText="Easy Returns" imageUrl="assets/img/portfolio/easyReturnsLogo.png" modalTarget="#portfolioModal3" ></app-portfolio-item>
                 </div>
             </div>
         </section>
