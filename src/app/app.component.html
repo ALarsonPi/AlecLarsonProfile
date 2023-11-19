@@ -55,12 +55,13 @@
                 </div>
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center">
-                    <app-portfolio-item imageAltText="Foodhero Logo" imageUrl="assets/img/portfolio/foodheroImage.png" modalTarget="#portfolioModal1" ></app-portfolio-item>
-                    <app-portfolio-item imageAltText="Konekt Logo" imageUrl="assets/img/portfolio/konekt.png" modalTarget="#portfolioModal6" ></app-portfolio-item>
-                    <app-portfolio-item imageAltText="Chore Sync Logo" imageUrl="assets/img/portfolio/resizedTransparent.png" modalTarget="#portfolioModal4" ></app-portfolio-item>
-                    <app-portfolio-item imageAltText="Goals App Logo" imageUrl="assets/img/portfolio/targetTransparent.png" modalTarget="#portfolioModal2" ></app-portfolio-item>
-                    <app-portfolio-item imageAltText="Red Box Logo" imageUrl="assets/img/portfolio/redSquareIcon.png" modalTarget="#portfolioModal5" ></app-portfolio-item>
-                    <app-portfolio-item imageAltText="Easy Returns" imageUrl="assets/img/portfolio/easyReturnsLogo.png" modalTarget="#portfolioModal3" ></app-portfolio-item>
+                    <ng-container *ngFor="let portfolioButton of portfolioButtons">
+                      <app-portfolio-item
+                        [imageAltText]="portfolioButton.imageAltText"
+                        [imageUrl]="portfolioButton.imageUrl"
+                        [modalTarget]="portfolioButton.modalTarget">
+                      </app-portfolio-item>
+                    </ng-container>
                 </div>
             </div>
         </section>
@@ -84,59 +85,16 @@
         </div>
 
         <!-- Portfolio Modals-->
-        <app-portfolio-popup
-          title="Food Hero"
-          modalTarget="portfolioModal1"
-          imageUrl="assets/img/portfolio/foodheroCollage.png"
-          imageAltText="Food Hero Screenshots"
-          description="Recipe and Food Preparation Mobile App built for Oregan State University's non-profit called <i>Foodhero</i>. Converted assets and recipes from their website into a mobile app with dynamic conversions between English and Spanish recipes."
-          [links]="foodHeroLinks">
-        </app-portfolio-popup>
-
-        <app-portfolio-popup
-          title="Goals Made Real"
-          modalTarget="portfolioModal2"
-          imageUrl="assets/img/portfolio/fullGoalsScreenshotsTransparent.png"
-          imageAltText="Goals Made Real Screenshots"
-          description="Goal Setting and Tracking App that focuses on helping achieve goals according to the your life's priorities. Can break goals into as many (or as few) pieces as needed to best organize your goals. Personal Images can be uploaded, new or different priorities can be added, and there's no limit to goals that can be set and achieved."
-          [links]="goalsMadeRealLinks">
-        </app-portfolio-popup>
-
-        <app-portfolio-popup
-          title="Easy Returns"
-          modalTarget="portfolioModal3"
-          imageUrl="assets/img/portfolio/easyReturnsCollageCloseUp.png"
-          imageAltText="Easy Returns Screenshots"
-          [description]="easyReturnsDescription"
-          [links]="easyReturnsLinks">
-        </app-portfolio-popup>
-
-        <app-portfolio-popup
-          title="Synched Chores"
-          modalTarget="portfolioModal4"
-          imageUrl="assets/img/portfolio/actualChoreChart.png"
-          imageAltText="Chore Chart Example Screenshot"
-          description="Chore chart that synchronizes across devices. Family members or roommates can be invited to join a chart so they can all see the same chart which dynamically updates on all devices when changed."
-          [links]="choreSyncLinks">
-        </app-portfolio-popup>
-
-        <app-portfolio-popup
-          title="Find the Red Box"
-          modalTarget="portfolioModal5"
-          imageUrl="assets/img/portfolio/redBoxSampleImage.png"
-          imageAltText="Red Box Screenshot"
-          description="A very small and short game that can help young children gain hand-eye coordination skills and practice interacting with different colors. The objective is to find a red square among squares with other colors around it. Each time the user finds and taps the red box, they get a point. The more points you recieve, the harder it is to find the red box. The display above would be around level 50. Global High scores shown after time limit runs out."
-          [links]="redBoxLinks">
-        </app-portfolio-popup>
-
-        <app-portfolio-popup
-          title="Konekt"
-          modalTarget="portfolioModal6"
-          imageUrl="assets/img/portfolio/konektBanner.png"
-          imageAltText="Konekt Triple Screenshot"
-          description="The Uber of live language translation. Connects skilled translators with immigrants, regugees, and law officials for either on-demand or scheduled video-call live translation sessions."
-          [links]="konektLinks">
-        </app-portfolio-popup>
+        <ng-container *ngFor="let popup of portfolioPopups">
+          <app-portfolio-popup
+            [title]="popup.title"
+            [modalTarget]="popup.modalTarget"
+            [imageUrl]="popup.imageUrl"
+            [imageAltText]="popup.imageAltText"
+            [description]="popup.description"
+            [links]="popup.links">
+          </app-portfolio-popup>
+        </ng-container>
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
