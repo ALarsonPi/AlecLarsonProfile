@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PortfolioLink } from '../../../classes/PortfolioLink';
 
 @Component({
   selector: 'app-portfolio-popup',
@@ -8,5 +9,10 @@ import { CommonModule } from '@angular/common';
   templateUrl: './portfolio-popup.component.html',
 })
 export class PortfolioPopupComponent {
-
+  @Input() modalTarget = "";
+  @Input() title = "";
+  @Input() imageUrl = "";
+  @Input() imageAltText = "...";
+  @Input() description = "";
+  @Input() links: PortfolioLink[] = [];
 }
