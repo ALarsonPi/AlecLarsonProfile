@@ -143,7 +143,7 @@ export class AppComponent {
   private mozoGuestbooksPopup: PortfolioPopup = {
     title: "Mozo Guestbooks",
     modalTarget: "portfolioModal7",
-    imageUrl: "assets/img/portfolio/mozoHoldingHands.jpeg",
+    imageUrl: "assets/img/portfolio/mozoFirstDanceSelfie.jpeg",
     imageAltText: "Mozo Guestbook combined screenshot",
     description: "Online text-in guestbook for wedding receptions. Allows guests to send in selfies, well wishes, and any pictures the photographer missed!",
     links: [
@@ -155,10 +155,10 @@ export class AppComponent {
   }
   private mozoGuestbooksButton: PortfolioButton = {
     imageAltText: 'Mozo Guestbooks Logo',
-    imageUrl: 'assets/img/portfolio/mozoFirstDanceSelfie.jpeg',
+    imageUrl: 'assets/img/portfolio/mozoCoupleWalkingDownHill.jpeg',
     modalTarget: '#' + this.mozoGuestbooksPopup.modalTarget
   };
 
   portfolioPopups: PortfolioPopup[] = [this.foodHeroPopup, this.goalsAppPopup, this.easyReturnsPopup, this.choreSyncPopup, this.redBoxAppPopup, this.konektPopup, this.mozoGuestbooksPopup];
-  portfolioButtons: PortfolioButton[] = [this.foodHeroButton, this.konektButton, this.choreSyncButton, this.mozoGuestbooksButton, this.goalsAppButton, this.redBoxButton, this.easyReturnsButton];
+  portfolioButtons: PortfolioButton[] = [this.foodHeroButton, this.konektButton, this.choreSyncButton, this.goalsAppButton, this.mozoGuestbooksButton, this.redBoxButton, this.easyReturnsButton];
 }
